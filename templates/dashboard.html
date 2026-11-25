@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <h1>Employee Management System</h1>
+
+<div class="dash">
+    <a href="{% url 'add_employee' %}">Add Employee</a>
+    <a href="{% url 'employee_list' %}">View Employees</a>
+</div>
+
+
+<img src="https://akriviahcm.com/blog/wp-content/uploads/2024/01/features-of-employee-management-system.png" alt="">
+
+</body>
+
+<style>
+    .dash {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    
+    }
+    .dash a{
+        text-decoration: none;
+        background-color: darkgreen;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+    }
+</style>
+</html>

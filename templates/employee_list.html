@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+</head>
+<body>
+
+    <h2>Employee Management System</h2>
+
+    <a class="add-em" href="{% url 'add_employee' %}">Add Employee</a>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.number }}</td>
+                <td>{{ employee.salary }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7">No employees found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</body>
+
+<style>
+    .add-em{
+        background-color: rgb(46, 77, 66);
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        margin-top: 15px;
+    }
+    table {
+        margin-top: 18px;
+    }
+</style>
+</html>
